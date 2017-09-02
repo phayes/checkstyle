@@ -2,12 +2,11 @@ build:
     dependencies:
         before:
             - source .scrutinizer.setup.bash
-            - 
 
     tests:
         override:
-            -   
-                command: cd $GOPATH/src/github.com/phayes/checkstyle && go get -t ./... && gocov test ./... -race | gocov-xml > /home/scrutinizer/build/coverage.xml
+            -
+                command: 'cd $GOPATH/src/github.com/phayes/checkstyle && go get -t ./... && gocov test ./... -race | gocov-xml > /home/scrutinizer/build/coverage.xml'
                 coverage:
                     file: 'coverage.xml'
                     format: 'clover'
