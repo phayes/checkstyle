@@ -6,7 +6,7 @@ build:
     tests:
         override:
             -
-                command: 'cd $GOPATH/src/$PROJECT && go get -t ./... && gocov test ./... -race | gocov-xml | sed "s@$GOPATH/src/$PROJECT@/home/scrutinizer/build@\" > /home/scrutinizer/build/coverage.xml'
+                command: 'cd $GOPATH/src/$PROJECT && go get -t ./... && gocov test ./... -race | gocov-xml | sed "s@$GOPATH/src/$PROJECT@/home/scrutinizer/build@" > /home/scrutinizer/build/coverage.xml'
                 coverage:
                     file: 'coverage.xml'
                     format: 'clover'
