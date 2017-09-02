@@ -22,7 +22,7 @@ Example usage:
   // Ensure that a file has been added
   file := check.EnsureFile("/path/to/file")
 
-  // Create an error on line 10
+  // Create an error on line 10, column 5
   codingError := checkstyle.NewError(10, 5, checkstyle.SeverityWarning, "format", "line must end with a full stop")
 
   // Add the error to the file
