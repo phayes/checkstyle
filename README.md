@@ -1,6 +1,7 @@
 # checkstyle
 [![GoDoc](https://godoc.org/github.com/phayes/checkstyle?status.svg)](https://godoc.org/github.com/phayes/checkstyle)
 [![Go Report Card](https://goreportcard.com/badge/github.com/phayes/checkstyle)](https://goreportcard.com/report/github.com/phayes/checkstyle)
+[![Build Status](https://scrutinizer-ci.com/g/phayes/checkstyle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/phayes/checkstyle/build-status/master)
 
 Read and write checksyle_report.xml files with golang
 
