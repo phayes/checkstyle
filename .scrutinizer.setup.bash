@@ -24,3 +24,4 @@ export PATH="$PATH:$GOPATH/bin"
 # Install coverage tools
 go get github.com/axw/gocov/...
 go get github.com/AlekSi/gocov-xml
+go get github.com/phayes/go-scrutinize

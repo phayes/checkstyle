@@ -10,3 +10,8 @@ build:
                 coverage:
                     file: 'coverage.xml'
                     format: 'clover'
+            -
+                command: 'cd $GOPATH/src/github.com/phayes/checkstyle go-scrutinize > checkstyle_report.xml'
+                analysis:
+                    file: 'checkstyle_report.xml'
+                    format: 'general-checkstyle' 
