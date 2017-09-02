@@ -1,0 +1,8 @@
+build:
+    dependencies:
+        before:
+            - source .scrutinizer.setup.bash
+
+    tests:
+        override:
+            - cd $GOPATH/src/github.com/phayes/checkstyle && go get -t ./... && go test ./... -race
