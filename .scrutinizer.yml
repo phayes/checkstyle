@@ -11,7 +11,7 @@ build:
                     file: 'coverage.xml'
                     format: 'clover'
             -
-                command: 'cd $GOPATH/src/$PROJECT && go-scrutinize -out_format=checkstyle-xml > checkstyle_report.xml'
+                command: 'cd $GOPATH/src/$PROJECT && go-scrutinize -output_format=checkstyle-xml > checkstyle_report.xml'
                 analysis:
                     file: 'checkstyle_report.xml'
                     format: 'general-checkstyle' 
