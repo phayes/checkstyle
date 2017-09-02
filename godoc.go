@@ -23,7 +23,7 @@ Example usage:
   file := check.EnsureFile("/path/to/file")
 
   // Create an error on line 10
-  codingError := checkstyle.NewError(10, "format", "line must end with a full stop")
+  codingError := checkstyle.NewError(10, 5, checkstyle.SeverityWarning, "format", "line must end with a full stop")
 
   // Add the error to the file
   file.AddError(codingError)
