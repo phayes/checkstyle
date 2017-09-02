@@ -5,4 +5,8 @@ build:
 
     tests:
         override:
-            - cd $GOPATH/src/github.com/phayes/checkstyle && go get -t ./... && go test ./... -race
+            -   
+                command: cd $GOPATH/src/github.com/phayes/checkstyle && go get -t ./... && gocov test ./... -race | gocov-xml > coverage.xml
+                coverage:
+                    file: 'coverage.xml'
+                    format: 'clover'

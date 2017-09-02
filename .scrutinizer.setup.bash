@@ -17,3 +17,8 @@ mkdir gopath
 export GOPATH=~/build/gopath
 mkdir -p $GOPATH/src/$OWNER
 ln -s ~/build $GOPATH/src/$PROJECT
+export PATH="$PATH:$GOPATH/bin"
+
+# Install coverage tools
+go get github.com/axw/gocov/...
+go get github.com/AlekSi/gocov-xml
