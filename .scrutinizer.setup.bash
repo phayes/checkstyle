@@ -1,14 +1,9 @@
 # This script installs go on Scrutinizer for github repositories
 
-export PROJECT= $SCRUTINIZER_PROJECT | sed 's/g/github.com/'
-export DOMAIN = echo $PROJECT | cut -d'/' -f1
-export OWNER = echo $PROJECT | cut -d'/' -f2
-export PACKAGE = echo $PROJECT | cut -d'/' -f3
-
-echo $PROJECT
-echo $DOMAIN
-echo $OWNER
-echo $PACKAGE
+export PROJECT=$(echo $SCRUTINIZER_PROJECT | sed 's/g/github.com/')
+export DOMAIN=$(echo $PROJECT | cut -d'/' -f1)
+export OWNER=$(echo $PROJECT | cut -d'/' -f2)
+export PACKAGE=$(echo $PROJECT | cut -d'/' -f3)
 
 # Install go
 wget https://storage.googleapis.com/golang/go1.9.linux-amd64.tar.gz
