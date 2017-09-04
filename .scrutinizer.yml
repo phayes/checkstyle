@@ -1,17 +1,15 @@
 build:
     dependencies:
         before:
-            - source .scrutinizer.setup.bash
+            - '"$(curl -fsSL https://raw.githubusercontent.com/phayes/go-scrutinize/master/install-golang)" | source /dev/stdi'
 
     tests:
         override:
             -
-                command: 'cd $GOPATH/src/$PROJECT && go get -t ./... && gocov test ./... -race | gocov-xml | sed "s@$GOPATH/src/$PROJECT@/home/scrutinizer/build@" > /home/scrutinizer/build/coverage.xml'
+                command: 'cd $PROJECTPATH && go-scrutinize'
                 coverage:
                     file: 'coverage.xml'
                     format: 'clover'
-            -
-                command: 'cd $GOPATH/src/$PROJECT && go-scrutinize -output_format=checkstyle-xml > checkstyle_report.xml'
                 analysis:
                     file: 'checkstyle_report.xml'
-                    format: 'general-checkstyle' 
+                    format: 'general-checkstyle'
