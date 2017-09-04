@@ -1,7 +1,7 @@
 build:
     dependencies:
         before:
-            - '"$(curl -fsSL https://raw.githubusercontent.com/phayes/go-scrutinize/master/install-golang)" | source /dev/stdi'
+            - '"$(curl -fsSL https://raw.githubusercontent.com/phayes/go-scrutinize/master/install-golang)" | source /dev/stdin'
 
     tests:
         override:
